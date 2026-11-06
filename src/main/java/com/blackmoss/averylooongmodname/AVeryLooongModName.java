@@ -8,6 +8,7 @@ import com.blackmoss.averylooongmodname.data.lang.ZhCnProvider;
 import com.blackmoss.averylooongmodname.data.lang.ZhTwProvider;
 import com.blackmoss.averylooongmodname.data.tag.ModBlockTagsProvider;
 import com.blackmoss.averylooongmodname.data.tag.ModItemTagsProvider;
+import com.blackmoss.averylooongmodname.registry.ALMNBlocks;
 import com.mojang.logging.LogUtils;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.Identifier;
@@ -30,6 +31,7 @@ public class AVeryLooongModName {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public AVeryLooongModName(IEventBus modEventBus, ModContainer modContainer) {
+        ALMNBlocks.BLOCKS.register(modEventBus);
     }
 
     public static Identifier identifier(String path) {
